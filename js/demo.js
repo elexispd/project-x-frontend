@@ -73,7 +73,7 @@ function deleteAllCookie(reload = true)
 	//var direction =  getUrlParams('dir');
 	var theme =  getUrlParams('theme');
 	
-	/* Dz Theme Demo Settings  */
+	/* Demo Settings  */
 	
 	var dlabThemeSet0 = { /* Default Theme */
 		typography: "poppins",
@@ -198,6 +198,7 @@ function deleteAllCookie(reload = true)
 		headerPosition: "fixed",
 		containerLayout: "full",
 	};
+
 	
 		
 	function themeChange(theme){
@@ -239,6 +240,7 @@ function deleteAllCookie(reload = true)
 				var optionData = getCookie(optionKey);
 				themeOptionArr[optionKey] = (optionData != '')?optionData:dlabSettingsOptions[optionKey];
 			});
+
 			//console.log(themeOptionArr);
 			dlabSettingsOptions = themeOptionArr;
 			new dlabSettings(dlabSettingsOptions);
@@ -265,9 +267,9 @@ function deleteAllCookie(reload = true)
 		if(theme != undefined){
 			themeChange(theme);
 		}else if(getCookie('version') == ''){	
-				themeChange(0);
-			
+			themeChange(4); // Set default to Demo 4
 		}
+		
 		
 		/* Set Theme On Page From Cookie */
 		setThemeOptionOnPage();

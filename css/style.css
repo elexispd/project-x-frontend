@@ -21040,20 +21040,6 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 [data-theme-version="dark"] .fc-unthemed .fc-content, [data-theme-version="dark"] .fc-unthemed .fc-divider, [data-theme-version="dark"] .fc-unthemed .fc-list-heading td, [data-theme-version="dark"] .fc-unthemed .fc-list-view, [data-theme-version="dark"] .fc-unthemed .fc-popover, [data-theme-version="dark"] .fc-unthemed .fc-row, [data-theme-version="dark"] .fc-unthemed tbody, [data-theme-version="dark"] .fc-unthemed td, [data-theme-version="dark"] .fc-unthemed th, [data-theme-version="dark"] .fc-unthemed thead {
   border-color: #333754; }
 
-168.email-left-box .intro-title {
-  background: var(--rgba-primary-1);
-  padding: 1rem;
-  margin: 1.875rem 0 1.25rem 0; }
-  168.email-left-box .intro-title h5, 168.email-left-box .intro-title .h5 {
-    margin-bottom: 0;
-    color: #6a707e;
-    font-size: 0.875rem; }
-    168.email-left-box .intro-title h5 i, 168.email-left-box .intro-title .h5 i {
-      font-size: 0.75rem;
-      position: relative;
-      bottom: 0.0625rem; }
-  168.email-left-box .intro-title i {
-    color: var(--primary); }
 
 .email-right-box .right-box-border {
   border-right: 0.125rem solid var(--rgba-primary-1); }

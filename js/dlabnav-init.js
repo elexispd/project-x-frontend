@@ -36,19 +36,17 @@ function getUrlParams(dParam)
 		typography: "poppins",
 		version: "light",
 		layout: "vertical",
-		primary: "color_1",
-		secondary: "color_1",
-		headerBg: "color_3",
-		navheaderBg: "color_3",
-		sidebarBg: "color_1",
+		primary: "color_9",
+		headerBg: "color_1",
+		navheaderBg: "color_9",
+		sidebarBg: "color_9",
 		sidebarStyle: "full",
 		sidebarPosition: "fixed",
 		headerPosition: "fixed",
 		containerLayout: "full",
 	};
 
-	
-	
+
 	
 	new dlabSettings(dlabSettingsOptions); 
 

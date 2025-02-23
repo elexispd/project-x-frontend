@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Token Verification</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #025D3A, #027247, #038b57);
+      font-family: 'Poppins', sans-serif;
+    }
+    /* Card Styles */
+    .card {
+      background: #fff;
+      border: none;
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+      animation: fadeIn 1s ease-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .card-header {
+      font-size: 1.75rem;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+    /* Form Styles */
+    .form-control {
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+    .form-control:focus {
+      border-color: #025D3A;
+      box-shadow: none;
+    }
+    /* Button */
+    .btn-custom {
+      background: #025D3A;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 0.75rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: background 0.3s;
+      width: 100%;
+    }
+    .btn-custom:hover {
+        background: #02442b;
+        color: #fff;
+    }
+    /* Info text */
+    .info-text {
+      font-size: 0.9rem;
+      color: #666;
+      text-align: center;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-header">Token Verification</div>
+    <form id="tokenForm">
+      <div class="mb-3">
+        <label for="tokenInput" class="form-label">Enter your 6-digit code</label>
+        <input type="text" id="tokenInput" class="form-control" placeholder="e.g. 123456" maxlength="6" pattern="\d{6}" required>
+      </div>
+      <button type="submit" class="btn btn-custom">Verify Token</button>
+      <div class="info-text">
+        Please check your email for the verification code.
+      </div>
+    </form>
+  </div>
+  
+  <script>
+    document.getElementById("tokenForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var token = document.getElementById("tokenInput").value;
+      if (/^\d{6}$/.test(token)) {
+        // Replace this alert with your actual token verification logic.
+        alert("Token verified: " + token);
+      } else {
+        alert("Please enter a valid 6-digit token.");
+      }
+    });
+  </script>
+</body>
+</html>
